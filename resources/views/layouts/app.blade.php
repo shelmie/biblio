@@ -4,18 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Charitize - Charity Organization Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
@@ -31,7 +30,6 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-
 
 <body>
     <!-- Spinner Start -->
@@ -103,9 +101,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav me-auto">
-                        <a href="{{route('aflivre')}}" class="nav-item nav-link active">Home</a>
-                        <a href="{{route('livres.create')}}" class="nav-item nav-link">Formulaire à ajouter</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="{{route('aflivre')}}" class="nav-item nav-link active">Accueil</a>
+                        <a href="" class="nav-item nav-link"></a>
+                      l  <a href="{{route('livres.create')}}" class="nav-item nav-link">Formulaire</a>
                         <a href="donation.html" class="nav-item nav-link">Donation</a>
                         <div class="nav-item dropdown">
                             <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -130,7 +128,14 @@
     </div>
     <!-- Navbar End -->
 
+
+
+
     @yield('content')
+
+
+    
+    
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
@@ -205,16 +210,12 @@
         </div>
     </div>
     <!-- Footer End -->
-     <!-- le mot content est un mot arbitraire. je choisi le mot que je souhaite et je l'appelle au besoin -->
 
-   
 
     <!-- Back to Top -->
     <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
-        <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
@@ -224,6 +225,6 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
-
 </body>
+
 </html>

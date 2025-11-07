@@ -13,6 +13,10 @@ class Livre extends Model {
         'auteur',
         'date',
         'edition',
+        'description',
+        'isbn',
+        'document',
+        'image',
     ];
 }
 ;

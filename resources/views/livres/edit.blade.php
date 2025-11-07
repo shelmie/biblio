@@ -1,3 +1,7 @@
+
+<!-- le nom du dossier ou du chemin ici layouts.le nom du fichier ici app -->
+@extends('layouts.app')
+@section('content')
 <div class="container py-4">
 
     {{-- Titre --}}
@@ -73,6 +77,18 @@
                             </div>
                         </div>
 
+                        {{-- ISBN--}}
+                        <div class="mb-3 row">
+                            <label for="isbn" class="col-sm-3 col-form-label fw-semibold">isbn</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="isbn" id="isbn"
+                                    class="form-control @error('isbn') is-invalid @enderror"
+                                    value="{{ old('isbn', $livre->isbn) }}">
+                                @error('isbn') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+
                         {{-- Date --}}
                         <div class="mb-3 row">
                             <label for="date" class="col-sm-3 col-form-label fw-semibold">Date</label>
@@ -83,6 +99,40 @@
                                 @error('date') <div class="invalid-feedback">{{ $message }}</div> @enderror
                             </div>
                         </div>
+
+                        {{-- Document --}}
+                        <div class="mb-3 row">
+                            <label for="document" class="col-sm-3 col-form-label fw-semibold">Document</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="document" id="document"
+                                    class="form-control @error('document') is-invalid @enderror"
+                                    value="{{ old('document', $livre->document) }}">
+                                @error('document') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                        {{-- Image --}}
+                        <div class="mb-3 row">
+                            <label for="image" class="col-sm-3 col-form-label fw-semibold">Image</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="image" id="image"
+                                    class="form-control @error('image') is-invalid @enderror"
+                                    value="{{ old('image', $livre->image) }}">
+                                @error('image') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                        {{-- DESCRIPTION--}}
+                        <div class="mb-3 row">
+                            <label for="description" class="col-sm-3 col-form-label fw-semibold">description</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="description" id="description"
+                                    class="form-control @error('description') is-invalid @enderror"
+                                    value="{{ old('description', $livre->description) }}">
+                                @error('description') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
 
                         {{-- Boutons --}}
                         <div class="text-center">
@@ -101,3 +151,5 @@
         </div>
     </div>
 </div>
+
+@endsection

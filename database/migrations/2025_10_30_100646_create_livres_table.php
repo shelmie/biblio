@@ -12,12 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('livres', function (Blueprint $table) {
-            $table->id();
-            $table->string('titre');
-            $table->string('auteur');
-            $table->date('date');
-            $table->text('edition');
+            $table->id(); 
 
+            // Informations principales
+            $table->string('titre', 255)->index(); 
+            $table->string('auteur', 255)->index(); 
+            $table->date('date')->nullable(); 
+            $table->string('edition', 255)->nullable(); 
+            $table->text('description'); 
+            $table->string('isbn', 20)->unique(); 
+            // Image : chemin du fichier (ex: storage/livres/images/)
+            $table->string('image', 255)->nullable();
+            // Document : PDF, Word… (ex: storage/livres/documents/)
+            $table->string('document', 255)->nullable(); 
             $table->timestamps();
         });
     }

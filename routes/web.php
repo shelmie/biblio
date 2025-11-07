@@ -5,21 +5,20 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\titi2Controller;
 use App\Http\Controllers\LivreController;
 
-Route::get('/', function () {
-    return view('welcome');
-}); // route static sans besoin de controller
+// Route::get('/', function () {
+//     return view('welcome');
+// }); // route static sans besoin de controller
+
+
 
 // Route::get('/pageac', function () {
 //     return view('index');
 // });
 
-Route::get('/livre', [PageController::class, 'livre'])->name('voir');
-
-Route::get('/verstiti', [titi2Controller::class, 'affichetiti']); 
 
 //route pour
 
-Route::get('/livres', [LivreController::class, 'aflivre'])->name('aflivre');
+Route::get('/', [LivreController::class, 'aflivre'])->name('aflivre');
 
 // Route pour afficher le formulaire
 
